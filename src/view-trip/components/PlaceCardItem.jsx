@@ -61,7 +61,7 @@ export default function PlaceCardItem({ place }) {
               🎫 {place?.ticketPricing}
             </p>
             <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300">
-              ⭐ {place?.rating.replace(" stars", "")}/5
+              ⭐ {place?.rating}
             </p>
           </div>
         </div>

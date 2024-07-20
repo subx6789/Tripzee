@@ -52,7 +52,7 @@ export default function HotelCard({ hotel }) {
           <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300 mb-3 line-clamp-1">📍 {hotel?.address}</p>
           <div className="mt-auto flex justify-between items-center">
             <p className="text-xs md:text-sm text-[#0085FF] dark:text-[#0085FF]">💰 {hotel?.price}</p>
-            <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300">⭐ {hotel?.rating.replace(" stars","")}/5</p>
+            <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300">⭐ {hotel?.rating}</p>
           </div>
         </div>
       </div>
