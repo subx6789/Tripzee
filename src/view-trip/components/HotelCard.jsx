@@ -51,8 +51,8 @@ export default function HotelCard({ hotel }) {
           <h2 className="font-bold text-base md:text-lg mb-2 line-clamp-2 dark:text-white">{hotel?.name}</h2>
           <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300 mb-3 line-clamp-1">📍 {hotel?.address}</p>
           <div className="mt-auto flex justify-between items-center">
-            <p className="text-xs md:text-sm text-[#0085FF] dark:text-[#0085FF]">💰 {hotel?.price}</p>
-            <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300">⭐ {hotel?.rating}</p>
+            <p className="text-xs md:text-sm text-[#0085FF] dark:text-[#0085FF]">💰 {hotel?.price || "Data Unavailable"}</p>
+            <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300">⭐ {hotel?.rating || "Data Unavailable"}</p>
           </div>
         </div>
       </div>

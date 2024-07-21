@@ -58,10 +58,10 @@ export default function PlaceCardItem({ place }) {
           </p>
           <div className="mt-auto flex justify-between items-center">
             <p className="text-xs md:text-sm text-[#0085FF] font-medium dark:text-[#0085FF]">
-              🎫 {place?.ticketPricing}
+              🎫 {place?.ticketPricing || "Data Unavailable"}
             </p>
             <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300">
-              ⭐ {place?.rating}
+              ⭐ {place?.rating || "Data Unavailable"}
             </p>
           </div>
         </div>

@@ -90,9 +90,10 @@ export default function Header() {
         where("userEmail", "==", user.email)
       );
       const querySnapshot = await getDocs(q);
-      querySnapshot.forEach(async (document) => {
-        await deleteDoc(doc(db, "AITrips", document.id));
-      });
+      const deletePromises = querySnapshot.docs.map((doc) =>
+        deleteDoc(doc.ref)
+      );
+      await Promise.all(deletePromises);
       handleLogout();
     } catch (error) {
       console.error("Failed to delete user account:", error);
